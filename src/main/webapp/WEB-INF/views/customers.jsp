@@ -12,22 +12,21 @@
 	<section>
 		<div class="jumbotron">
 			<div class="container">
-				<h1>Produkty</h1>
-				<p>Wszystkie produkty dostępne w naszym sklepie</p>
+				<h1>Klienci</h1>
+				<p>Wszyscy klienci naszego sklepu</p>
 			</div>
 		</div>
 	</section>
 
 	<section class="container">
 		<div class="row">
-		    <c:forEach items="${products}" var="product">
+		    <c:forEach items="${customers}" var="customer">
 				<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
 					<div class="thumbnail">
 						<div class="caption">
-							<h3>${product.name}</h3>
-							<p>${product.description}</p>
-							<p>${product.unitPrice} PLN</p>
-							<p>Liczba sztuk w magazynie: ${product.unitsInStock}</p>
+							<h3>${customer.name}</h3>
+							<p>${customer.address}</p>
+							<p>Liczba zrealizowanych zamówień: ${customer.noOfOrdersMade} PLN</p>
 						</div>
 					</div>
 				</div>
