@@ -9,7 +9,7 @@ public class Product {
 	private BigDecimal unitPrice;
 	private String description;
 	private String manufacturer;
-	private String category;
+	private Category category;
 	private long unitsInStock;
 	private long unitsInOrder;
 	private boolean discontinued;
@@ -65,11 +65,11 @@ public class Product {
 		this.manufacturer = manufacturer;
 	}
 
-	public String getCategory() {
+	public Category getCategory() {
 		return category;
 	}
 
-	public void setCategory(String category) {
+	public void setCategory(Category category) {
 		this.category = category;
 	}
 
