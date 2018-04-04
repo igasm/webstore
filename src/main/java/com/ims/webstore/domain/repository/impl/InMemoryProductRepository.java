@@ -114,6 +114,11 @@ public class InMemoryProductRepository implements ProductRepository {
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public void addProduct(Product product) {
+        this.listOfProducts.add(product);
+    }
+
     public Predicate<Product> isProductOfBrand(List<String> brands){
         return product -> brands.contains(product.getManufacturer());
     }

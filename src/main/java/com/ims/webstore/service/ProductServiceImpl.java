@@ -53,4 +53,9 @@ public class ProductServiceImpl implements ProductService{
 
     return byCategory;
   }
+
+  @Override
+  public void addProduct(Product product) {
+    this.productRepository.addProduct(product);
+  }
 }
