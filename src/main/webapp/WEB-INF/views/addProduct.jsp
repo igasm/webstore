@@ -16,6 +16,7 @@
 				<h1>Produkty</h1>
 				<p>Dodaj produkty</p>
 			</div>
+			<a href="<c:url value="/logout" />" class="btn btn-danger btn-mini pull-right">wyloguj</a>
 		</div>
 	</section>
 	<section class="container">
