@@ -13,4 +13,5 @@ public class HomeController {
         model.addAttribute("tagline", "Wyjątkowym i jedynym sklepie internetowym");
         return "welcome";
     }
+
 }

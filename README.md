@@ -12,23 +12,21 @@ These instructions will get you a copy of the project up and running on your loc
 * Tomcat version 7 or higher
 * Maven
 
-### Installing
+### Installing and running
 
-A step by step series of examples that tell you how to get a development env running
+##### Go to project folder
 
-Say what the step will be
-
+Prepare war file by runing maven command:
 ```
-Give the example
-```
-
-And repeat
-
-```
-until finished
+mvn package
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Copy webstore.war file from /target folder
+
+##### Open Apache Tomcat folder
+Navigate to webapps folder and there put war file.
+If Tomcat is already running just wait a while until it will automatically unpack war file.
+If Tomcat is not running, start it (e.g go to bin folder and run startup.sh or startup.bat file).
 
 ## Running the tests
 
@@ -53,6 +51,21 @@ Give an example
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
+
+## Server resources
+
+to see static resources, try:
+```
+http://localhost:8080/webstore/resource/iphone.jpg
+```
+
+or
+
+```
+http://localhost:8080/webstore/resource/samsung.jpg
+```
+
+(Static resources are kept in webstore\src\main\resources\static and handling static resources is defined in DispatcherServlet-context.xml)
 
 ## Built With
 
