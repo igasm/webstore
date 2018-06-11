@@ -25,6 +25,7 @@
 				<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
 					<div class="thumbnail">
 						<div class="caption">
+						    <img src="<c:url value="/resource/${product.productId}.jpg"></c:url>" alt="image" style = "width:100%"/>
 							<h3>${product.name}</h3>
 							<p>${product.description}</p>
 							<p>${product.unitPrice} PLN</p>
