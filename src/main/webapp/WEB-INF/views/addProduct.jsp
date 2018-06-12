@@ -20,7 +20,8 @@
 		</div>
 	</section>
 	<section class="container">
-		<form:form  modelAttribute="newProduct" class="form-horizontal" enctype="multipart/form-data">
+	<%--	<form:form  modelAttribute="newProduct" class="form-horizontal" enctype="multipart/form-data"> --%>
+		<form:form  modelAttribute="newProduct" class="form-horizontal">
 			<fieldset>
 				<legend>Dodaj nowy produkt</legend>
 
