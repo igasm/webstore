@@ -80,15 +80,15 @@ public class ProductController {
             throw new RuntimeException("Próba wiązania niedozwolonych pól: " + StringUtils.arrayToCommaDelimitedString(suppressedFields));
         }
 
-//        MultipartFile productImage = newProduct.getProductImage();
-//        String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-//        if (productImage!=null && !productImage.isEmpty()){
-//            try {
-//                productImage.transferTo(new File(rootDirectory+"resources\\static"+newProduct.getProductId() + ".jpg"));
-//            } catch (Exception e) {
-//                throw new RuntimeException("Niepowodzenie podczas próby zapisu obrazka produktu", e);
-//            }
-//        }
+        MultipartFile productImage = newProduct.getProductImage();
+        String rootDirectory = request.getSession().getServletContext().getRealPath("/");
+        if (productImage!=null && !productImage.isEmpty()){
+            try {
+                productImage.transferTo(new File(rootDirectory+"resources\\static"+newProduct.getProductId() + ".jpg"));
+            } catch (Exception e) {
+                throw new RuntimeException("Niepowodzenie podczas próby zapisu obrazka produktu", e);
+            }
+        }
 
         productService.addProduct(newProduct);
         return "redirect:/products";

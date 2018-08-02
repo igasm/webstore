@@ -16,7 +16,7 @@ public class Product {
 	private long unitsInOrder;
 	private boolean discontinued;
 	private String condition;
-//	private MultipartFile productImage;
+	private MultipartFile productImage;
 
 	public Product() {
 		super();
@@ -139,11 +139,11 @@ public class Product {
 		return "Product [productId=" + productId + ", name=" + name + "]";
 	}
 
-//	public MultipartFile getProductImage() {
-//		return productImage;
-//	}
-//
-//	public void setProductImage(MultipartFile productImage) {
-//		this.productImage = productImage;
-//	}
+	public MultipartFile getProductImage() {
+		return productImage;
+	}
+
+	public void setProductImage(MultipartFile productImage) {
+		this.productImage = productImage;
+	}
 }
