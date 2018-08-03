@@ -19,7 +19,7 @@
 	<section class="container">
 		<div class="row">
 			<div class="col-md-5">
-			    <img src="<c:url value="/resource/${product.productId}.jpg"></c:url>" alt="image" style = "width:100%"/>
+			    <img src="<c:url value="/resources/${product.productId}.png"></c:url>" alt="image" style = "width:100%"/>
 				<h3>${product.name}</h3>
 				<p>${product.description}</p>
 				<p>

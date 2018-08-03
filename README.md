@@ -52,20 +52,14 @@ Give an example
 
 Add additional notes about how to deploy this on a live system
 
-## Server resources
-
-to see static resources, try:
+## Handling multipart/form-data request
+multipart/form-data request are used when uploading files to server, to use that feature, Tomcat serve must allow parsing multipart/form-data request.
+To do that edit Tomcat context.xml, and set:
 ```
-http://localhost:8080/webstore/resource/iphone.jpg
-```
-
-or
-
-```
-http://localhost:8080/webstore/resource/samsung.jpg
+<Context allowCasualMultipartParsing="true">
 ```
 
-(Static resources are kept in webstore\src\main\resources\static and handling static resources is defined in DispatcherServlet-context.xml)
+see: https://tomcat.apache.org/tomcat-8.0-doc/config/context.html
 
 ## Built With
 

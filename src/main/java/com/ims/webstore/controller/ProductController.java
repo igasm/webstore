@@ -84,7 +84,7 @@ public class ProductController {
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
         if (productImage!=null && !productImage.isEmpty()){
             try {
-                productImage.transferTo(new File(rootDirectory+"resources\\static"+newProduct.getProductId() + ".jpg"));
+                productImage.transferTo(new File(rootDirectory+"\\"+newProduct.getProductId() + ".png"));
             } catch (Exception e) {
                 throw new RuntimeException("Niepowodzenie podczas próby zapisu obrazka produktu", e);
             }
